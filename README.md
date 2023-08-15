@@ -984,6 +984,25 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 ---
 </details><details>
+	<summary> <strong> sqrt </strong> </summary>	
+
+---
+
+#####  Package sqrt contains algorithms and data structures that contains a √n in their complexity
+
+---
+##### Functions:
+
+1. [`NewSqrtDecomposition`](./sqrt/sqrtdecomposition.go#L34):  Create a new SqrtDecomposition instance with the parameters as specified by SqrtDecomposition comment Assumptions:   - len(elements) > 0
+
+---
+##### Types
+
+1. [`SqrtDecomposition`](./sqrt/sqrtdecomposition.go#L21): No description provided.
+
+
+---
+</details><details>
 	<summary> <strong> stack </strong> </summary>	
 
 ---
