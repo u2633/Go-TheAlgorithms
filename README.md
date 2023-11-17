@@ -89,16 +89,15 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 ##### Functions:
 
-1. [`NewLRU`](./cache/lru.go#L22): NewLRU represent initiate lru cache with capacity
-2. [`NewLFU`](./cache/lfu.go#L33): NewLFU represent initiate lfu cache with capacity
-3. [`Get`](./cache/lfu.go#L52): Get the value by key from LFU cache
-4. [`Put`](./cache/lfu.go#L66): Put the key and value in LFU cache
+1. [`NewLFU`](./cache/lfu.go#L33):  NewLFU init the LFU cache with capacity
+2. [`NewLRU`](./cache/lru.go#L23):  NewLRU represent initiate lru cache with capacity
 
 ---
 ##### Types
 
-1. [`LRU`](./cache/lru.go#L15): Default the struct of lru cache algorithm.
-2. [`LFU`](./cache/lfu.go#L19): Default the struct of lfu cache algorithm.
+1. [`LFU`](./cache/lfu.go#L19): No description provided.
+
+2. [`LRU`](./cache/lru.go#L15): No description provided.
 
 
 ---
@@ -638,7 +637,7 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 ---
 
-#####  Package math is a package that contains mathematical algorithms and its different implementations. filename : krishnamurthy.go description: A program which contains the function that returns true if a given number is Krishnamurthy number or not. details: A number is a Krishnamurthy number if the sum of all the factorials of the digits is equal to the number. Ex: 1! = 1, 145 = 1! + 4! + 5! author(s): [GooMonk](https://github.com/GooMonk) see krishnamurthy_test.go
+#####  filename : krishnamurthy.go description: A program which contains the function that returns true if a given number is Krishnamurthy number or not. details: A number is a Krishnamurthy number if the sum of all the factorials of the digits is equal to the number. Ex: 1! = 1, 145 = 1! + 4! + 5! author(s): [GooMonk](https://github.com/GooMonk) see krishnamurthy_test.go Package math is a package that contains mathematical algorithms and its different implementations.
 
 ---
 ##### Functions:
@@ -987,9 +986,12 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 ---
 
+#####  Segment Tree Data Structure for efficient range queries on an array of integers. It can query the sum and update the elements to a new value of any range of the array. Build: O(n*log(n)) Query: O(log(n)) Update: O(log(n)) reference: https://cp-algorithms.com/data_structures/segment_tree.html
+
+---
 ##### Functions:
 
-1. [`NewSegmentTree`](./structure/segmenttree/segmenttree.go#L116): No description provided.
+1. [`NewSegmentTree`](./structure/segmenttree/segmenttree.go#L117):  NewSegmentTree returns a new instance of a SegmentTree. It takes an input array of integers representing Array, initializes and builds the SegmentTree.
 
 ---
 ##### Types
@@ -1056,6 +1058,7 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 23. [`Selection`](./sort/selectionsort.go#L5): No description provided.
 24. [`Shell`](./sort/shellsort.go#L5): No description provided.
 25. [`Simple`](./sort/simplesort.go#L13): No description provided.
+26. [`Timsort`](./sort/timsort.go#L13):  Timsort is a simple generic implementation of Timsort algorithm.
 
 ---
 ##### Types
