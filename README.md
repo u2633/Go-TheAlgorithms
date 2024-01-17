@@ -344,6 +344,25 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 ---
 </details><details>
+	<summary> <strong> fenwicktree </strong> </summary>	
+
+---
+
+#####  Fenwick Tree Data Structure for efficient range queries on an array of integers. Also known as Binary Indexed Tree. It can query the sum of any range of the array and can update the array at a specific position by adding a value to it (point update). Build: O(N) Query: O(log(N)) Update: O(log(N)) reference: https://brilliant.org/wiki/fenwick-tree/
+
+---
+##### Functions:
+
+1. [`NewFenwickTree`](./structure/fenwicktree/fenwicktree.go#L20):  NewFenwickTree creates a new Fenwick tree, initializes bit with the values of the array. Note that the queries and updates should have one based indexing.
+
+---
+##### Types
+
+1. [`FenwickTree`](./structure/fenwicktree/fenwicktree.go#L11): No description provided.
+
+
+---
+</details><details>
 	<summary> <strong> fibonacci </strong> </summary>	
 
 ---
@@ -637,7 +656,7 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 ---
 
-#####  filename : krishnamurthy.go description: A program which contains the function that returns true if a given number is Krishnamurthy number or not. details: A number is a Krishnamurthy number if the sum of all the factorials of the digits is equal to the number. Ex: 1! = 1, 145 = 1! + 4! + 5! author(s): [GooMonk](https://github.com/GooMonk) see krishnamurthy_test.go Package math is a package that contains mathematical algorithms and its different implementations.
+#####  Package math is a package that contains mathematical algorithms and its different implementations. filename : krishnamurthy.go description: A program which contains the function that returns true if a given number is Krishnamurthy number or not. details: A number is a Krishnamurthy number if the sum of all the factorials of the digits is equal to the number. Ex: 1! = 1, 145 = 1! + 4! + 5! author(s): [GooMonk](https://github.com/GooMonk) see krishnamurthy_test.go
 
 ---
 ##### Functions:
