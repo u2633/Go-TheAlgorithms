@@ -124,7 +124,7 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 ##### Functions:
 
-1. [`CatalanNumber`](./math/catalan/catalannumber.go#L16):  CatalanNumber This function returns the `nth` Catalan number
+1. [`CatalanNumber`](./math/catalan/catalannumber.go#L24):  CatalanNumber This function returns the `nth` Catalan number
 
 ---
 </details><details>
@@ -289,7 +289,7 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 ---
 
-#####  Package dynamic is a package of certain implementations of dynamically run algorithms.
+#####  filename: traprainwater.go description: Provides a function to calculate the amount of trapped rainwater between bars represented by an elevation map using dynamic programming. details: The TrapRainWater function calculates the amount of trapped rainwater between the bars represented by the given elevation map. It uses dynamic programming to precompute the maximum height of bars to the left and right of each position. Then, it iterates through the array to calculate the amount of trapped rainwater at each position based on the minimum of the left and right maximum heights. Finally, it sums up the trapped rainwater for all positions and returns the total amount. author(s) [TruongNhanNguyen (SOZEL)](https://github.com/TruongNhanNguyen) See https://leetcode.com/problems/unique-paths/ author: Rares Mateizer (https://github.com/rares985) Package dynamic is a package of certain implementations of dynamically run algorithms.
 
 ---
 ##### Functions:
@@ -313,7 +313,9 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 17. [`Max`](./dynamic/knapsack.go#L11):  Max function - possible duplicate
 18. [`NthCatalanNumber`](./dynamic/catalan.go#L13):  NthCatalan returns the n-th Catalan Number Complexity: O(n²)
 19. [`NthFibonacci`](./dynamic/fibonacci.go#L6):  NthFibonacci returns the nth Fibonacci Number
-20. [`TrapRainWater`](./dynamic/traprainwater.go#L17): Calculate the amount of trapped rainwater between bars represented by an elevation map using dynamic programming.
+20. [`TrapRainWater`](./dynamic/traprainwater.go#L17):  TrapRainWater calculates the amount of trapped rainwater between the bars represented by the given elevation map. It uses dynamic programming to precompute the maximum height of bars to the left and right of each position. Then, it iterates through the array to calculate the amount of trapped rainwater at each position based on the minimum of the left and right maximum heights. Finally, it sums up the trapped rainwater for all positions and returns the total amount.
+21. [`UniquePaths`](./dynamic/uniquepaths.go#L6):  UniquePaths implements the solution to the "Unique Paths" problem
+
 ---
 </details><details>
 	<summary> <strong> dynamicarray </strong> </summary>	
@@ -339,9 +341,9 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 ---
 ##### Functions:
 
-1. [`Iterative`](./math/factorial/factorial.go#L12):  Iterative returns the iteratively brute forced factorial of n
-2. [`Recursive`](./math/factorial/factorial.go#L21):  Recursive This function recursively computes the factorial of a number
-3. [`UsingTree`](./math/factorial/factorial.go#L30):  UsingTree This function finds the factorial of a number using a binary tree
+1. [`Iterative`](./math/factorial/factorial.go#L18):  Iterative returns the iteratively brute forced factorial of n
+2. [`Recursive`](./math/factorial/factorial.go#L30):  Recursive This function recursively computes the factorial of a number
+3. [`UsingTree`](./math/factorial/factorial.go#L42):  UsingTree This function finds the factorial of a number using a binary tree
 
 ---
 </details><details>
@@ -470,17 +472,17 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 2. [`BreadthFirstSearch`](./graph/breadthfirstsearch.go#L9):  BreadthFirstSearch is an algorithm for traversing and searching graph data structures. It starts at an arbitrary node of a graph, and explores all of the neighbor nodes at the present depth prior to moving on to the nodes at the next depth level. Worst-case performance	 		O(|V|+|E|)=O(b^{d})}O(|V|+|E|)=O(b^{d}) Worst-case space complexity	 	O(|V|)=O(b^{d})}O(|V|)=O(b^{d}) reference: https://en.wikipedia.org/wiki/Breadth-first_search
 3. [`DepthFirstSearch`](./graph/depthfirstsearch.go#L53): No description provided.
 4. [`DepthFirstSearchHelper`](./graph/depthfirstsearch.go#L21): No description provided.
-5. [`FloydWarshall`](./graph/floydwarshall.go#L15):  FloydWarshall Returns all pair's shortest path using Floyd Warshall algorithm
-6. [`GetIdx`](./graph/depthfirstsearch.go#L3): No description provided.
-7. [`KruskalMST`](./graph/kruskal.go#L23): No description provided.
-8. [`PrimMST`](./graph/prim.go#30): Computes the minimum spanning tree of a weighted undirected graph
-9. [`LowestCommonAncestor`](./graph/lowestcommonancestor.go#L111):  For each node, we will precompute its ancestor above him, its ancestor two nodes above, its ancestor four nodes above, etc. Let's call `jump[j][u]` is the `2^j`-th ancestor above the node `u` with `u` in range `[0, numbersVertex)`, `j` in range `[0,MAXLOG)`. These information allow us to jump from any node to any ancestor above it in `O(MAXLOG)` time.
-10. [`New`](./graph/graph.go#L16):  Constructor functions for graphs (undirected by default)
-11. [`NewTree`](./graph/lowestcommonancestor.go#L84): No description provided.
-12. [`NewUnionFind`](./graph/unionfind.go#L24):  Initialise a new union find data structure with s nodes
-13. [`NotExist`](./graph/depthfirstsearch.go#L12): No description provided.
-14. [`Topological`](./graph/topological.go#L7):  Topological assumes that graph given is valid and that its possible to get a topological ordering. constraints are array of []int{a, b}, representing an edge going from a to b
-15. [`Edmond-Karp`](./graph/edmondkarp.go#L43): Computes the maximum possible flow between a pair of s-t vertices in a weighted graph
+5. [`EdmondKarp`](./graph/edmondkarp.go#L43): No description provided.
+6. [`FindPath`](./graph/edmondkarp.go#L16):  Returns a mapping of vertices as path, if there is any from source to sink Otherwise, returns nil
+7. [`FloydWarshall`](./graph/floydwarshall.go#L15):  FloydWarshall Returns all pair's shortest path using Floyd Warshall algorithm
+8. [`GetIdx`](./graph/depthfirstsearch.go#L3): No description provided.
+9. [`KruskalMST`](./graph/kruskal.go#L23): No description provided.
+10. [`LowestCommonAncestor`](./graph/lowestcommonancestor.go#L111):  For each node, we will precompute its ancestor above him, its ancestor two nodes above, its ancestor four nodes above, etc. Let's call `jump[j][u]` is the `2^j`-th ancestor above the node `u` with `u` in range `[0, numbersVertex)`, `j` in range `[0,MAXLOG)`. These information allow us to jump from any node to any ancestor above it in `O(MAXLOG)` time.
+11. [`New`](./graph/graph.go#L16):  Constructor functions for graphs (undirected by default)
+12. [`NewTree`](./graph/lowestcommonancestor.go#L84): No description provided.
+13. [`NewUnionFind`](./graph/unionfind.go#L24):  Initialise a new union find data structure with s nodes
+14. [`NotExist`](./graph/depthfirstsearch.go#L12): No description provided.
+15. [`Topological`](./graph/topological.go#L7):  Topological assumes that graph given is valid and that its possible to get a topological ordering. constraints are array of []int{a, b}, representing an edge going from a to b
 
 ---
 ##### Types
@@ -501,6 +503,10 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 8. [`WeightedGraph`](./graph/floydwarshall.go#L9): No description provided.
 
+9. [`minEdge`](#L0): 
+
+	Methods:
+	1. [`Len`](./graph/prim.go#L14): No description provided.
 
 ---
 </details><details>
@@ -659,7 +665,7 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 ---
 
-#####  Package math is a package that contains mathematical algorithms and its different implementations. filename : krishnamurthy.go description: A program which contains the function that returns true if a given number is Krishnamurthy number or not. details: A number is a Krishnamurthy number if the sum of all the factorials of the digits is equal to the number. Ex: 1! = 1, 145 = 1! + 4! + 5! author(s): [GooMonk](https://github.com/GooMonk) see krishnamurthy_test.go
+#####  filename : krishnamurthy.go description: A program which contains the function that returns true if a given number is Krishnamurthy number or not. details: A number is a Krishnamurthy number if the sum of all the factorials of the digits is equal to the number. Ex: 1! = 1, 145 = 1! + 4! + 5! author(s): [GooMonk](https://github.com/GooMonk) see krishnamurthy_test.go Package math is a package that contains mathematical algorithms and its different implementations.
 
 ---
 ##### Functions:
@@ -852,7 +858,7 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 1. [`GenerateElementSet`](./math/permutation/heaps.go#L37): No description provided.
 2. [`Heaps`](./math/permutation/heaps.go#L8):  Heap's Algorithm for generating all permutations of n objects
-3. [`NextPermutation`](./math/permutation/next_permutation.go#8): A solution to find next permutation of an integer array in constant memory
+3. [`NextPermutation`](./math/permutation/next_permutation.go#L8): No description provided.
 
 ---
 </details><details>
@@ -963,6 +969,17 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 3. [`Queue`](./structure/queue/queuelinkedlist.go#L19): No description provided.
 
+
+---
+</details><details>
+	<summary> <strong> railfence </strong> </summary>	
+
+---
+
+##### Functions:
+
+1. [`Decrypt`](./cipher/railfence/railfence.go#L44): No description provided.
+2. [`Encrypt`](./cipher/railfence/railfence.go#L7): No description provided.
 
 ---
 </details><details>
@@ -1169,8 +1186,10 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 ##### Functions:
 
 1. [`NewAVL`](./structure/tree/avl.go#L54):  NewAVL creates a novel AVL tree
-2. [`NewBinarySearch`](./structure/tree/bstree.go#L46):  NewBinarySearch creates a novel Binary-Search tree
-3. [`NewRB`](./structure/tree/rbtree.go#L57):  NewRB creates a new Red-Black Tree
+2. [`NewBTree`](./structure/tree/btree.go#L35): No description provided.
+3. [`NewBTreeNode`](./structure/tree/btree.go#L24): No description provided.
+4. [`NewBinarySearch`](./structure/tree/bstree.go#L46):  NewBinarySearch creates a novel Binary-Search tree
+5. [`NewRB`](./structure/tree/rbtree.go#L57):  NewRB creates a new Red-Black Tree
 
 ---
 ##### Types
@@ -1181,11 +1200,15 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 3. [`BSNode`](./structure/tree/bstree.go#L15): No description provided.
 
-4. [`BinarySearch`](./structure/tree/bstree.go#L40): No description provided.
+4. [`BTree`](./structure/tree/btree.go#L15): No description provided.
 
-5. [`RB`](./structure/tree/rbtree.go#L51): No description provided.
+5. [`BTreeNode`](./structure/tree/btree.go#L8): No description provided.
 
-6. [`RBNode`](./structure/tree/rbtree.go#L25): No description provided.
+6. [`BinarySearch`](./structure/tree/bstree.go#L40): No description provided.
+
+7. [`RB`](./structure/tree/rbtree.go#L51): No description provided.
+
+8. [`RBNode`](./structure/tree/rbtree.go#L25): No description provided.
 
 
 ---
@@ -1221,19 +1244,6 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 1. [`Decrypt`](./cipher/xor/xor.go#L19):  Decrypt decrypts with Xor encryption
 2. [`Encrypt`](./cipher/xor/xor.go#L10):  Encrypt encrypts with Xor encryption after converting each character to byte The returned value might not be readable because there is no guarantee which is within the ASCII range If using other type such as string, []int, or some other types, add the statements for converting the type to []byte.
 3. [`FuzzXOR`](./cipher/xor/xor_test.go#L108): No description provided.
-
----
-</details>
-
-#####  Package rail fence is a classical type of transposition cipher ref : https://en.wikipedia.org/wiki/Rail_fence_cipher
-
----
-##### Functions:
-
-1. [`Encrypt`](.cipher/railfence/railfence.go#L7):  Encrypt encrypts a message using rail fence cipher
-2. [`Decrypt`](.cipher/railfence/railfence.go#L44):  decrypt decrypts a message using rail fence cipher
-3. [`TestEncrypt`](.cipher/railfence/railfence_test.go#L7) Test function for Encrypt
-4. [`TestDecrypt`](.cipher/railfence/railfence_test.go#L50) Test function for Decrypt
 
 ---
 </details>
