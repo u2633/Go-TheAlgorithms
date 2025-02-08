@@ -344,7 +344,7 @@ author(s): [ddaniel27](https://github.com/ddaniel27)
 
 ---
 
-#####  fibonacci.go description: Implementation of the Fibonacci sequence using dynamic programming time complexity: O(n) space complexity: O(1) See https://leetcode.com/problems/unique-paths/ time complexity: O(m*n) where m and n are the dimensions of the grid space complexity: O(m*n) where m and n are the dimensions of the grid author: Rares Mateizer (https://github.com/rares985) filename: traprainwater.go description: Provides a function to calculate the amount of trapped rainwater between bars represented by an elevation map using dynamic programming. details: The TrapRainWater function calculates the amount of trapped rainwater between the bars represented by the given elevation map. It uses dynamic programming to precompute the maximum height of bars to the left and right of each position. Then, it iterates through the array to calculate the amount of trapped rainwater at each position based on the minimum of the left and right maximum heights. Finally, it sums up the trapped rainwater for all positions and returns the total amount. time complexity: O(n) space complexity: O(n) author(s) [TruongNhanNguyen (SOZEL)](https://github.com/TruongNhanNguyen) Package dynamic is a package of certain implementations of dynamically run algorithms. binomialcoefficient.go description: Implementation of the binomial coefficient using dynamic programming details: The binomial coefficient C(n, k) is the number of ways to choose a subset of k elements from a set of n elements. The binomial coefficient is calculated using the formula C(n, k) = C(n-1, k-1) + C(n-1, k) with base cases C(n, 0) = C(n, n) = 1. time complexity: O(n*k) where n is the number of elements and k is the number of elements to choose space complexity: O(n*k) where n is the number of elements and k is the number of elements to choose
+#####  binomialcoefficient.go description: Implementation of the binomial coefficient using dynamic programming details: The binomial coefficient C(n, k) is the number of ways to choose a subset of k elements from a set of n elements. The binomial coefficient is calculated using the formula C(n, k) = C(n-1, k-1) + C(n-1, k) with base cases C(n, 0) = C(n, n) = 1. time complexity: O(n*k) where n is the number of elements and k is the number of elements to choose space complexity: O(n*k) where n is the number of elements and k is the number of elements to choose filename: traprainwater.go description: Provides a function to calculate the amount of trapped rainwater between bars represented by an elevation map using dynamic programming. details: The TrapRainWater function calculates the amount of trapped rainwater between the bars represented by the given elevation map. It uses dynamic programming to precompute the maximum height of bars to the left and right of each position. Then, it iterates through the array to calculate the amount of trapped rainwater at each position based on the minimum of the left and right maximum heights. Finally, it sums up the trapped rainwater for all positions and returns the total amount. time complexity: O(n) space complexity: O(n) author(s) [TruongNhanNguyen (SOZEL)](https://github.com/TruongNhanNguyen) fibonacci.go description: Implementation of the Fibonacci sequence using dynamic programming time complexity: O(n) space complexity: O(1) See https://leetcode.com/problems/unique-paths/ time complexity: O(m*n) where m and n are the dimensions of the grid space complexity: O(m*n) where m and n are the dimensions of the grid author: Rares Mateizer (https://github.com/rares985) Package dynamic is a package of certain implementations of dynamically run algorithms.
 
 ---
 ##### Functions:
@@ -354,22 +354,34 @@ author(s): [ddaniel27](https://github.com/ddaniel27)
 3. [`CoinChange`](./dynamic/coinchange.go#L11):  CoinChange finds the number of possible combinations of coins of different values which can get to the target amount.
 4. [`CutRodDp`](./dynamic/rodcutting.go#L23):  CutRodDp solve the same problem using dynamic programming
 5. [`CutRodRec`](./dynamic/rodcutting.go#L10):  CutRodRec solve the problem recursively: initial approach
-6. [`EditDistanceDP`](./dynamic/editdistance.go#L37):  EditDistanceDP is an optimised implementation which builds on the ideas of the recursive implementation. We use dynamic programming to compute the DP table where dp[i][j] denotes the edit distance value of first[0..i-1] and second[0..j-1]. Time complexity is O(m * n) where m and n are lengths of the strings, first and second respectively.
-7. [`EditDistanceRecursive`](./dynamic/editdistance.go#L12):  EditDistanceRecursive is a naive implementation with exponential time complexity.
-8. [`IsSubsetSum`](./dynamic/subsetsum.go#L15): No description provided.
-9. [`Knapsack`](./dynamic/knapsack.go#L20):  Knapsack solves knapsack problem return maxProfit
-10. [`LongestCommonSubsequence`](./dynamic/longestcommonsubsequence.go#L16):  LongestCommonSubsequence function
-11. [`LongestIncreasingSubsequence`](./dynamic/longestincreasingsubsequence.go#L15):  LongestIncreasingSubsequence returns the longest increasing subsequence where all elements of the subsequence are sorted in increasing order
-12. [`LongestIncreasingSubsequenceGreedy`](./dynamic/longestincreasingsubsequencegreedy.go#L9):  LongestIncreasingSubsequenceGreedy is a function to find the longest increasing subsequence in a given array using a greedy approach. The dynamic programming approach is implemented alongside this one. Worst Case Time Complexity: O(nlogn) Auxiliary Space: O(n), where n is the length of the array(slice). Reference: https://www.geeksforgeeks.org/construction-of-longest-monotonically-increasing-subsequence-n-log-n/
-13. [`LpsDp`](./dynamic/longestpalindromicsubsequence.go#L27):  LpsDp function
-14. [`LpsRec`](./dynamic/longestpalindromicsubsequence.go#L22):  LpsRec function
-15. [`MatrixChainDp`](./dynamic/matrixmultiplication.go#L26):  MatrixChainDp function
-16. [`MatrixChainRec`](./dynamic/matrixmultiplication.go#L12):  MatrixChainRec function
-17. [`Max`](./dynamic/knapsack.go#L14):  Max function - possible duplicate
-18. [`NthCatalanNumber`](./dynamic/catalan.go#L15):  NthCatalan returns the n-th Catalan Number Complexity: O(n²)
-19. [`NthFibonacci`](./dynamic/fibonacci.go#L10):  NthFibonacci returns the nth Fibonacci Number
-20. [`TrapRainWater`](./dynamic/traprainwater.go#L19):  TrapRainWater calculates the amount of trapped rainwater between the bars represented by the given elevation map. It uses dynamic programming to precompute the maximum height of bars to the left and right of each position. Then, it iterates through the array to calculate the amount of trapped rainwater at each position based on the minimum of the left and right maximum heights. Finally, it sums up the trapped rainwater for all positions and returns the total amount.
-21. [`UniquePaths`](./dynamic/uniquepaths.go#L8):  UniquePaths implements the solution to the "Unique Paths" problem
+6. [`DiceThrow`](./dynamic/dicethrow.go#L10):  DiceThrow returns the number of ways to get sum `sum` using `m` dice with `n` faces
+7. [`EditDistanceDP`](./dynamic/editdistance.go#L37):  EditDistanceDP is an optimised implementation which builds on the ideas of the recursive implementation. We use dynamic programming to compute the DP table where dp[i][j] denotes the edit distance value of first[0..i-1] and second[0..j-1]. Time complexity is O(m * n) where m and n are lengths of the strings, first and second respectively.
+8. [`EditDistanceRecursive`](./dynamic/editdistance.go#L12):  EditDistanceRecursive is a naive implementation with exponential time complexity.
+9. [`EggDropping`](./dynamic/eggdropping.go#L10):  EggDropping finds the minimum number of attempts needed to find the critical floor with `eggs` number of eggs and `floors` number of floors
+10. [`IsInterleave`](./dynamic/interleavingstrings.go#L10):  IsInterleave checks if string `s1` and `s2` can be interleaved to form string `s3`
+11. [`IsMatch`](./dynamic/wildcardmatching.go#L10):  IsMatch checks if the string `s` matches the wildcard pattern `p`
+12. [`IsSubsetSum`](./dynamic/subsetsum.go#L15): No description provided.
+13. [`Knapsack`](./dynamic/knapsack.go#L20):  Knapsack solves knapsack problem return maxProfit
+14. [`LongestArithmeticSubsequence`](./dynamic/longestarithmeticsubsequence.go#L10):  LongestArithmeticSubsequence returns the length of the longest arithmetic subsequence
+15. [`LongestCommonSubsequence`](./dynamic/longestcommonsubsequence.go#L16):  LongestCommonSubsequence function
+16. [`LongestIncreasingSubsequence`](./dynamic/longestincreasingsubsequence.go#L15):  LongestIncreasingSubsequence returns the longest increasing subsequence where all elements of the subsequence are sorted in increasing order
+17. [`LongestIncreasingSubsequenceGreedy`](./dynamic/longestincreasingsubsequencegreedy.go#L9):  LongestIncreasingSubsequenceGreedy is a function to find the longest increasing subsequence in a given array using a greedy approach. The dynamic programming approach is implemented alongside this one. Worst Case Time Complexity: O(nlogn) Auxiliary Space: O(n), where n is the length of the array(slice). Reference: https://www.geeksforgeeks.org/construction-of-longest-monotonically-increasing-subsequence-n-log-n/
+18. [`LongestPalindromicSubstring`](./dynamic/longestpalindromicsubstring.go#L10):  LongestPalindromicSubstring returns the longest palindromic substring in the input string
+19. [`LpsDp`](./dynamic/longestpalindromicsubsequence.go#L27):  LpsDp function
+20. [`LpsRec`](./dynamic/longestpalindromicsubsequence.go#L22):  LpsRec function
+21. [`MatrixChainDp`](./dynamic/matrixmultiplication.go#L26):  MatrixChainDp function
+22. [`MatrixChainRec`](./dynamic/matrixmultiplication.go#L12):  MatrixChainRec function
+23. [`Max`](./dynamic/knapsack.go#L14):  Max function - possible duplicate
+24. [`MaxCoins`](./dynamic/burstballoons.go#L6):  MaxCoins returns the maximum coins we can collect by bursting the balloons
+25. [`MaxSubArraySum`](./dynamic/maxsubarraysum.go#L12):  MaxSubArraySum returns the sum of the maximum subarray in the input array
+26. [`NthCatalanNumber`](./dynamic/catalan.go#L15):  NthCatalan returns the n-th Catalan Number Complexity: O(n²)
+27. [`NthFibonacci`](./dynamic/fibonacci.go#L10):  NthFibonacci returns the nth Fibonacci Number
+28. [`OptimalBST`](./dynamic/optimalbst.go#L6):  OptimalBST returns the minimum cost of constructing a Binary Search Tree
+29. [`PartitionProblem`](./dynamic/partitionproblem.go#L11):  PartitionProblem checks whether the given set can be partitioned into two subsets such that the sum of the elements in both subsets is the same.
+30. [`TilingProblem`](./dynamic/tilingproblem.go#L10):  TilingProblem returns the number of ways to tile a 2xN grid using 2x1 dominoes
+31. [`TrapRainWater`](./dynamic/traprainwater.go#L19):  TrapRainWater calculates the amount of trapped rainwater between the bars represented by the given elevation map. It uses dynamic programming to precompute the maximum height of bars to the left and right of each position. Then, it iterates through the array to calculate the amount of trapped rainwater at each position based on the minimum of the left and right maximum heights. Finally, it sums up the trapped rainwater for all positions and returns the total amount.
+32. [`UniquePaths`](./dynamic/uniquepaths.go#L8):  UniquePaths implements the solution to the "Unique Paths" problem
+33. [`WordBreak`](./dynamic/wordbreak.go#L10):  WordBreak checks if the input string can be segmented into words from a dictionary
 
 ---
 </details><details>
@@ -731,7 +743,7 @@ author(s): [ddaniel27](https://github.com/ddaniel27)
 
 ---
 
-#####  Package math is a package that contains mathematical algorithms and its different implementations. filename : krishnamurthy.go description: A program which contains the function that returns true if a given number is Krishnamurthy number or not. details: A number is a Krishnamurthy number if the sum of all the factorials of the digits is equal to the number. Ex: 1! = 1, 145 = 1! + 4! + 5! time complexity: O(log n) space complexity: O(1) author(s): [GooMonk](https://github.com/GooMonk) see krishnamurthy_test.go
+#####  filename : krishnamurthy.go description: A program which contains the function that returns true if a given number is Krishnamurthy number or not. details: A number is a Krishnamurthy number if the sum of all the factorials of the digits is equal to the number. Ex: 1! = 1, 145 = 1! + 4! + 5! time complexity: O(log n) space complexity: O(1) author(s): [GooMonk](https://github.com/GooMonk) see krishnamurthy_test.go Package math is a package that contains mathematical algorithms and its different implementations.
 
 ---
 ##### Functions:
@@ -1013,6 +1025,520 @@ author(s): [ddaniel27](https://github.com/ddaniel27)
 
 ---
 </details><details>
+	<summary> <strong> problem1 </strong> </summary>	
+
+---
+
+##### /**
+ * Problem 1 - Multiples of 3 and 5
+ *
+ * @see {@link https://projecteuler.net/problem=1}
+ *
+ * If we list all the natural numbers below 10 that are multiples of 3 or 5,
+ * we get 3, 5, 6 and 9. The sum of these multiples is 23.
+ * Find the sum of all the multiples of 3 or 5 below 1000.
+ *
+ * @author ddaniel27
+ 
+
+---
+##### Functions:
+
+1. [`Problem1`](./project_euler/problem_1/problem1.go#L14): No description provided.
+
+---
+</details><details>
+	<summary> <strong> problem10 </strong> </summary>	
+
+---
+
+##### /**
+* Problem 10 - Summation of primes
+* @see {@link https://projecteuler.net/problem=10}
+*
+* The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+* Find the sum of all the primes below two million.
+*
+* @author ddaniel27
+ 
+
+---
+##### Functions:
+
+1. [`Problem10`](./project_euler/problem_10/problem10.go#L14): No description provided.
+
+---
+</details><details>
+	<summary> <strong> problem11 </strong> </summary>	
+
+---
+
+##### /**
+* Problem 11 - Largest product in a grid
+* @see {@link https://projecteuler.net/problem=11}
+*
+* In the 20×20 grid below, four numbers along a diagonal line have been marked in red.
+*
+* The product of these numbers is 26 × 63 × 78 × 14 = 1788696.
+*
+* What is the greatest product of four adjacent numbers in the same direction
+* (up, down, left, right, or diagonally) in the 20×20 grid?
+*
+* @author ddaniel27
+ 
+
+---
+##### Functions:
+
+1. [`Problem11`](./project_euler/problem_11/problem11.go#L39): No description provided.
+
+---
+</details><details>
+	<summary> <strong> problem12 </strong> </summary>	
+
+---
+
+##### /**
+* Problem 12 - Highly divisible triangular number
+* @see {@link https://projecteuler.net/problem=12}
+*
+* The sequence of triangle numbers is generated by adding the natural numbers.
+* So the 7th triangle number would be 1 + 2 + 3 + 4 + 5 + 6 + 7 = 28.
+* The first ten terms would be:
+*
+* 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, ...
+*
+* Let us list the factors of the first seven triangle numbers:
+*
+*  1: 1
+*  3: 1,3
+*  6: 1,2,3,6
+* 10: 1,2,5,10
+* 15: 1,3,5,15
+* 21: 1,3,7,21
+* 28: 1,2,4,7,14,28
+*
+* We can see that 28 is the first triangle number to have over five divisors.
+* What is the value of the first triangle number to have over five hundred divisors?
+*
+* @author ddaniel27
+ 
+
+---
+##### Functions:
+
+1. [`Problem12`](./project_euler/problem_12/problem12.go#L28): No description provided.
+
+---
+</details><details>
+	<summary> <strong> problem13 </strong> </summary>	
+
+---
+
+##### /**
+* Problem 13 - Large sum
+* @see {@link https://projecteuler.net/problem=13}
+*
+* Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.
+*
+* @author ddaniel27
+ 
+
+---
+##### Functions:
+
+1. [`Problem13`](./project_euler/problem_13/problem13.go#L114): No description provided.
+
+---
+</details><details>
+	<summary> <strong> problem14 </strong> </summary>	
+
+---
+
+##### /**
+* Problem 14 - Longest Collatz sequence
+* @see {@link https://projecteuler.net/problem=14}
+*
+* The following iterative sequence is defined for the set of positive integers:
+* n → n/2 (n is even)
+* n → 3n + 1 (n is odd)
+*
+* Using the rule above and starting with 13, we generate the following sequence:
+* 13 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1
+*
+* Which starting number, under one million, produces the longest chain?
+*
+* NOTE: Once the chain starts the terms are allowed to go above one million.
+*
+* @author ddaniel27
+ 
+
+---
+##### Functions:
+
+1. [`Problem14`](./project_euler/problem_14/problem14.go#L26): No description provided.
+
+---
+</details><details>
+	<summary> <strong> problem15 </strong> </summary>	
+
+---
+
+##### /**
+* Problem 15 - Lattice paths
+* @see {@link https://projecteuler.net/problem=15}
+*
+* Starting in the top left corner of a 2×2 grid,
+* and only being able to move to the right and down,
+* there are exactly 6 routes to the bottom right corner.
+*
+* How many such routes are there through a 20×20 grid?
+*
+* @author ddaniel27
+ 
+
+---
+##### Functions:
+
+1. [`Problem15`](./project_euler/problem_15/problem15.go#L19): No description provided.
+
+---
+</details><details>
+	<summary> <strong> problem16 </strong> </summary>	
+
+---
+
+##### /**
+* Problem 16 - Power digit sum
+* @see {@link https://projecteuler.net/problem=16}
+*
+* 2^15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
+*
+* What is the sum of the digits of the number 2^1000?
+*
+* @author ddaniel27
+ 
+
+---
+##### Functions:
+
+1. [`Problem16`](./project_euler/problem_16/problem16.go#L17): No description provided.
+
+---
+</details><details>
+	<summary> <strong> problem17 </strong> </summary>	
+
+---
+
+##### /**
+* I put this code in a separate file because it is too long.
+* Also it took me a lot of time to parsing this input from
+* a random html page, so, I don't want to lose it.
+ /**
+* Problem 17 - Number letter counts
+* @see {@link https://projecteuler.net/problem=17}
+*
+* If the numbers 1 to 5 are written out in words: one, two, three, four, five,
+* then there are 3 + 3 + 5 + 4 + 4 = 19 letters used in total.
+*
+* If all the numbers from 1 to 1000 (one thousand) inclusive were written out in words,
+* how many letters would be used?
+*
+* NOTE: Do not count spaces or hyphens. For example, 342 (three hundred and forty-two)
+* contains 23 letters and 115 (one hundred and fifteen) contains 20 letters.
+* The use of "and" when writing out numbers is in compliance with British usage.
+*
+* @author ddaniel27
+ 
+
+---
+##### Functions:
+
+1. [`Problem17`](./project_euler/problem_17/problem17.go#L21): No description provided.
+
+---
+</details><details>
+	<summary> <strong> problem18 </strong> </summary>	
+
+---
+
+##### /**
+* Problem 18 - Maximum path sum I
+* @see {@link https://projecteuler.net/problem=18}
+*
+* By starting at the top of the triangle below and
+* moving to adjacent numbers on the row below,
+* the maximum total from top to bottom is 23.
+*
+* 3
+* 7 4
+* 2 4 6
+* 8 5 9 3
+*
+* That is, 3 + 7 + 4 + 9 = 23.
+*
+* Find the maximum total from top to bottom of the triangle below:
+* [refer to the problem link]
+*
+* NOTE: As there are only 16384 routes, it is possible
+* to solve this problem by trying every route.
+* However, Problem 67, is the same challenge with a triangle
+* containing one-hundred rows; it cannot be solved by brute force,
+* and requires a clever method! ;o)
+*
+* @author ddaniel27
+ 
+
+---
+##### Functions:
+
+1. [`Problem18`](./project_euler/problem_18/problem18.go#L50): No description provided.
+
+---
+##### Types
+
+1. [`DFSNode`](./project_euler/problem_18/tree.go#L56): No description provided.
+
+2. [`Edge`](./project_euler/problem_18/edge.go#L3): No description provided.
+
+3. [`Leaf`](./project_euler/problem_18/leaf.go#L3): No description provided.
+
+4. [`Root`](./project_euler/problem_18/root.go#L3): No description provided.
+
+5. [`Tree`](./project_euler/problem_18/tree.go#L8): No description provided.
+
+
+---
+</details><details>
+	<summary> <strong> problem19 </strong> </summary>	
+
+---
+
+##### Functions:
+
+1. [`IsLeapYear`](./project_euler/problem_19/problem19.go#L55): No description provided.
+2. [`Problem19`](./project_euler/problem_19/problem19.go#L26): No description provided.
+
+---
+</details><details>
+	<summary> <strong> problem2 </strong> </summary>	
+
+---
+
+##### /**
+* Problem 2 - Even Fibonacci numbers
+* @see {@link https://projecteuler.net/problem=2}
+*
+* Each new term in the Fibonacci sequence is generated by adding the previous two terms.
+* By starting with 1 and 2, the first 10 terms will be:
+*
+* 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+*
+* By considering the terms in the Fibonacci sequence whose values do not exceed four million,
+* find the sum of the even-valued terms.
+*
+* @author ddaniel27
+ 
+
+---
+##### Functions:
+
+1. [`Problem2`](./project_euler/problem_2/problem2.go#L17): No description provided.
+
+---
+</details><details>
+	<summary> <strong> problem20 </strong> </summary>	
+
+---
+
+##### /**
+* Problem 20 - Factorial digit sum
+* @see {@link https://projecteuler.net/problem=20}
+*
+* n! means n × (n − 1) × ... × 3 × 2 × 1
+*
+* For example, 10! = 10 × 9 × ... × 3 × 2 × 1 = 3628800,
+* and the sum of the digits in the number 10! is 3 + 6 + 2 + 8 + 8 + 0 + 0 = 27.
+*
+* Find the sum of the digits in the number 100!
+*
+* @author ddaniel27
+ 
+
+---
+##### Functions:
+
+1. [`Problem20`](./project_euler/problem_20/problem20.go#L18): No description provided.
+
+---
+</details><details>
+	<summary> <strong> problem3 </strong> </summary>	
+
+---
+
+##### /**
+* Problem 3 - Largest prime factor
+* @see {@link https://projecteuler.net/problem=3}
+*
+* The prime factors of 13195 are 5, 7, 13 and 29.
+* What is the largest prime factor of the number 600851475143 ?
+*
+* @author ddaniel27
+ 
+
+---
+##### Functions:
+
+1. [`Problem3`](./project_euler/problem_3/problem3.go#L12): No description provided.
+
+---
+</details><details>
+	<summary> <strong> problem4 </strong> </summary>	
+
+---
+
+##### /**
+* Problem 4 - Largest palindrome product
+* @see {@link https://projecteuler.net/problem=4}
+*
+* A palindromic number reads the same both ways.
+* The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+* Find the largest palindrome made from the product of two 3-digit numbers.
+*
+* @author ddaniel27
+ 
+
+---
+##### Functions:
+
+1. [`Problem4`](./project_euler/problem_4/problem4.go#L19): No description provided.
+
+---
+</details><details>
+	<summary> <strong> problem5 </strong> </summary>	
+
+---
+
+##### /**
+* Problem 5 - Smallest multiple
+* @see {@link https://projecteuler.net/problem=5}
+*
+* 2520 is the smallest number that can be divided by
+* each of the numbers from 1 to 10 without any remainder.
+* What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+*
+* @author ddaniel27
+ 
+
+---
+##### Functions:
+
+1. [`Problem5`](./project_euler/problem_5/problem5.go#L13): No description provided.
+
+---
+</details><details>
+	<summary> <strong> problem6 </strong> </summary>	
+
+---
+
+##### /**
+* Problem 6 - Sum square difference
+* @see {@link https://projecteuler.net/problem=6}
+*
+* The sum of the squares of the first ten natural numbers is,
+* 1^2 + 2^2 + ... + 10^2 = 385
+*
+* The square of the sum of the first ten natural numbers is,
+* (1 + 2 + ... + 10)^2 = 55^2 = 3025
+*
+* Hence the difference between the sum of the squares of the first ten natural numbers
+* and the square of the sum is 3025 − 385 = 2640.
+*
+* Find the difference between the sum of the squares of the first one hundred natural numbers
+* and the square of the sum.
+*
+* @author ddaniel27
+ 
+
+---
+##### Functions:
+
+1. [`Problem6`](./project_euler/problem_6/problem6.go#L21): No description provided.
+
+---
+</details><details>
+	<summary> <strong> problem7 </strong> </summary>	
+
+---
+
+##### /**
+* Problem 7 - 10001st prime
+* @see {@link https://projecteuler.net/problem=7}
+*
+* By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13,
+* we can see that the 6th prime is 13.
+*
+* What is the 10 001st prime number?
+*
+* @author ddaniel27
+ 
+
+---
+##### Functions:
+
+1. [`Problem7`](./project_euler/problem_7/problem7.go#L16): No description provided.
+
+---
+</details><details>
+	<summary> <strong> problem8 </strong> </summary>	
+
+---
+
+##### /**
+* Problem 8 - Largest product in a series
+* @see {@link https://projecteuler.net/problem=8}
+*
+* The four adjacent digits in the 1000-digit number that
+* have the greatest product are 9 × 9 × 8 × 9 = 5832.
+* Find the thirteen adjacent digits in the 1000-digit number
+* that have the greatest product. What is the value of this product?
+*
+* @author ddaniel27
+ 
+
+---
+##### Functions:
+
+1. [`Problem8`](./project_euler/problem_8/problem8.go#L16): No description provided.
+
+---
+</details><details>
+	<summary> <strong> problem9 </strong> </summary>	
+
+---
+
+##### /**
+* Problem 9 - Special Pythagorean triplet
+* @see {@link https://projecteuler.net/problem=9}
+*
+* A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,
+* a^2 + b^2 = c^2
+*
+* For example, 3^2 + 4^2 = 9 + 16 = 25 = 5^2.
+*
+* There exists exactly one Pythagorean triplet for which a + b + c = 1000.
+* Find the product abc.
+*
+* @author ddaniel27
+ 
+
+---
+##### Functions:
+
+1. [`Problem9`](./project_euler/problem_9/problem9.go#L17): No description provided.
+
+---
+</details><details>
 	<summary> <strong> pythagoras </strong> </summary>	
 
 ---
@@ -1085,14 +1611,14 @@ author(s): [ddaniel27](https://github.com/ddaniel27)
 
 ---
 
-#####  Package rsa shows a simple implementation of RSA algorithm/*
+##### /*
 rsa2.go
 description: RSA encryption and decryption including key generation
 details: [RSA wiki](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
 time complexity: O(n)
 space complexity: O(1)
 author(s): [ddaniel27](https://github.com/ddaniel27)
- 
+  Package rsa shows a simple implementation of RSA algorithm
 
 ---
 ##### Functions:
@@ -1171,7 +1697,7 @@ author(s): [ddaniel27](https://github.com/ddaniel27)
 
 ---
 
-#####  Package sort a package for demonstrating sorting algorithms in Go Package sort implements various sorting algorithms.
+#####  Package sort implements various sorting algorithms. Package sort a package for demonstrating sorting algorithms in Go
 
 ---
 ##### Functions:
@@ -1203,7 +1729,8 @@ author(s): [ddaniel27](https://github.com/ddaniel27)
 25. [`Selection`](./sort/selectionsort.go#L5): No description provided.
 26. [`Shell`](./sort/shellsort.go#L5): No description provided.
 27. [`Simple`](./sort/simplesort.go#L16): No description provided.
-28. [`Timsort`](./sort/timsort.go#L13):  Timsort is a simple generic implementation of Timsort algorithm.
+28. [`Stooge`](./sort/stooge_sort.go#L28): No description provided.
+29. [`Timsort`](./sort/timsort.go#L13):  Timsort is a simple generic implementation of Timsort algorithm.
 
 ---
 ##### Types
